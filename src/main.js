@@ -20,8 +20,6 @@ var app = new Vue({
   template: '<App/>',
   components: { App, Login, Bottom },
   data: {
-    scnHeight: '',
-    scnWidth: ''
   },
   methods: {
     setScreen: () => {
@@ -31,14 +29,6 @@ var app = new Vue({
 
       screen.style.height = viewHeight + 'px'
       screen.style.width = viewWidth + 'px'
-    },
-    clickButton: () => {
-      Indicator.open({
-        spinnerType: 'fading-circle'
-      })
-      setTimeout(() => {
-        Indicator.close()
-      }, 5000)
     }
   }
 })

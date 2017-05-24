@@ -13,14 +13,27 @@
           <input type="text" placeholder="验证码">
           <img src="">
         </div>
-        <button type="button">登录</button>
+        <button @click="clickButton" type="button">登录</button>
     </form>
   </div>
 </template>
 
 <script>
+import { Indicator } from 'mint-ui'
+
 export default {
-  name: 'login'
+  name: 'login',
+  methods: {
+    clickButton () {
+      Indicator.open({
+        spinnerType: 'fading-circle'
+      })
+      setTimeout(() => {
+        Indicator.close()
+      }, 5000)
+      console.log('OK')
+    }
+  }
 }
 </script>
 

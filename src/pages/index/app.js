@@ -1,10 +1,10 @@
 import Vue from 'vue'
-import { Indicator } from 'mint-ui'
+import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import App from './app.vue'
 import loginBg from 'assets/img/login-bg.png'
 
-Vue.use(Indicator)
+Vue.use(MintUI)
 
 var myApp = new Vue({
   el: '#app',

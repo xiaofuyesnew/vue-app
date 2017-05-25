@@ -7,8 +7,11 @@
         <input type="text" placeholder="账号">
         <div class="u-rmbpw">
           <input type="password" placeholder="密码">
-          <input id="remember" type="checkbox">
-          <label for="remember">记住密码</label>
+          <div class="remember">
+            <input id="remember" type="checkbox">
+            <label for="remember"></label>
+            <span>记住密码</span>
+          </div>
         </div>
         <div class="u-check">
           <input type="text" placeholder="验证码">
@@ -98,8 +101,46 @@ a {
 .u-rmbpw {
   position: relative;
 }
+.u-rmbpw span {
+  font-size: 1.4rem;
+  color: #fff;
+}
+.remember {
+  position: absolute;
+  width: 25vw;
+  right: 15vw;
+  top: 5.3vw;
+}
 .u-rmbpw input[type="checkbox"] {
-  background: rgba(0, 0, 0, 0);
+  visibility: hidden;
+  display: block;
+  float: right;
+}
+.u-rmbpw input[type="checkbox"]+label::before {
+  content: '\a0';
+  display: block;
+  float: left;
+  width: 1rem;
+  height: 1rem;
+  margin: .3rem 0 0;
+  border-radius: .2rem;
+  border: 1px solid #fff;
+  text-indent: .15rem;
+  line-height: .65;
+}
+.u-rmbpw input[type="checkbox"]:checked+label::before {
+  content: '\a0';
+  background: url("../../assets/img/check.png") no-repeat;
+  background-size: 100%;
+  display: block;
+  float:left;
+  width: 1rem;
+  height: 1rem;
+  margin: .3rem 0 0;
+  border-radius: .2rem;
+  border: 1px solid #fff;
+  text-indent: .15rem;
+  line-height: .65;
 }
 .u-login button {
   display: block;

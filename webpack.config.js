@@ -15,7 +15,6 @@ const extractLESS = new ExtractTextPlugin({
   allChunks: true
 })
 
-
 const entries = {}
 const chunks = []
 glob.sync('./src/pages/**/app.js').forEach(path => {
@@ -29,7 +28,7 @@ const config = {
   output: {
     path: resolve(__dirname, './dist'),
     filename: 'assets/js/[name].js',
-    publicPath: '/'
+    publicPath: ''
   },
   resolve: {
     extensions: ['.js', '.vue'],
